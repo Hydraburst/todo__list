@@ -1,0 +1,209 @@
+* 
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    font-family: 'monstesatt', sans-serif
+    
+.container 
+    background-color: #fff
+    box-shadow: 0px 0px 4px rgba(0, 23, 71, 0.15)
+    border-radius: 32px 
+    max-width: 1100px 
+    padding: 0 15px
+    margin: 0 auto 
+        
+
+
+input:not([type="checkbox"]),
+button
+    appearance: none
+    border: none
+    outline: none
+    background: none
+    cursor: initial 
+
+.main__input
+    padding-left: 20px
+
+input::placeholder 
+    font-weight: 400
+    font-size: 16px
+    line-height: 110% 
+    
+
+
+.todo__container 
+    max-width: 600px 
+    margin: 0 auto
+
+.todo__title 
+    padding: 72px 0 32px 0
+    color: #11175E
+    line-height: 56.88px
+    font-weight: 600
+    font-size: 48px
+
+.todo__field-add
+    display: flex 
+    align-items: center
+    justify-content: space-between
+    max-width: 600px 
+    width: 100%
+    background: #FFFFFF
+    border: 1px solid #EEEEEE
+    border-radius: 8px
+
+.todo-item 
+    margin-top: 20px
+
+input[type="checkbox"]
+    display: none
+
+input[type="submit"]
+    background-color: #2D70FD
+    margin: 7px
+    padding: 12px 24px
+    border: 1px solid #2D70FD
+    border-radius: 4px
+    color: #fff 
+    cursor: pointer
+
+.checkbox-custom 
+    display: flex 
+    align-items: center
+    justify-content: center
+    width: 20px
+    height: 20px 
+    box-shadow: 0px 0px 4px rgba(0, 23, 71, 0.15)
+    border-radius: 50%
+
+.checkbox-custom::after 
+    content: "✓"
+    color: #fff
+    display: block
+    padding-left: 4px
+    opacity: 0
+    width: 0px
+    height: 0px
+    background-color: #00D8A7
+    border-radius: 50%
+    transition: 0.2 ease-in-out
+
+input:checked ~ .checkbox-custom::after 
+    width: 20px
+    height: 20px 
+    opacity: 1
+
+.todo__field-add input[type="submit"]:hover 
+    opacity: 0.75
+
+.list 
+    padding: 0.5rem
+
+    .todo-item 
+        display: flex
+        align-items: center
+        margin-bottom: 1rem
+
+
+.todo-item 
+    
+    label
+        display: block
+        margin-right: 1rem
+        cursor: pointer
+
+    .todo-content 
+        flex: 1 1 0%
+
+        input
+            color: black 
+            font-size: 1.125rem
+    
+    .actions 
+        display: flex
+        align-items: center
+        
+        button 
+            display: block
+            padding: 8px 16px
+            border-radius: 0.25rem
+            color: #fff
+            cursor: pointer
+            transition: 0.2 ease-in-out
+
+        button:hover
+            opacity: 0.75
+
+        .edit 
+            margin-right: 0.5rem 
+            background-color: #2D70FD
+            font-size: 0.9rem
+
+        .delete 
+            margin-right: 0.5rem 
+            background-color: #ff312e
+            font-size: 0.9rem    
+.done 
+    .todo-content
+        input 
+            text-decoration: line-through
+            color: gray
+
+@media (max-width: 375px) 
+    .todo__title 
+        padding: 31.5px 0 16px 0
+        text-align: center
+        line-height: 26.44px
+        font-weight: 600
+        font-size: 32px
+
+    .container 
+        max-width: 345px 
+    
+    input[type="submit"]
+        margin: 3.5px
+        padding: 6px 12px
+        font-size: 12px
+    input::placeholder 
+        font-weight: 500
+        font-size: 12px
+
+    .todo-item 
+        label
+            margin-right: 0.5rem
+
+    .todo-content 
+        flex: 1 1 0%
+
+        input
+            color: black 
+            font-size: 1.125rem
+    
+    .actions 
+        display: flex
+        flex-direction: column
+        align-items: center
+        
+        button 
+            display: block
+            padding: 4px 8px
+            border-radius: 0.25rem
+            color: #fff
+            cursor: pointer
+            transition: 0.2 ease-in-out
+
+        .edit 
+            margin-right: 0.25rem 
+            background-color: #2D70FD
+            font-size: 0.3rem
+            min-width: 73.63px
+            margin-bottom: 0.5rem
+
+        .delete 
+            margin-right: 0.25rem 
+            background-color: #ff312e
+            font-size: 0.3rem        
+         
+    
+    
